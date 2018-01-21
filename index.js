@@ -19,6 +19,7 @@ router(app);
 app.use(morgan('combined'));
 //server setup
 
-const port = process.env.PORT | 3081;
+const port = process.env.PORT || 3081;
 const server  = http.createServer(app)
 server.listen(port);
+console.log('Server started.. listening on ',process.env.PORT)
