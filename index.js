@@ -7,8 +7,10 @@ const app = express();
 const cors = require("cors");
 const router = require("./router");
 //DB setup 
-//mongoose.connect('mongodb://silam:silam@ds046357.mlab.com:46357/authapplication?replicaSet=rs-ds046357');
-mongoose.connect(process.env.DB_URL);
+mongoose.connect('mongodb://silam:silam@ds046357.mlab.com:46357/authapplication?replicaSet=rs-ds046357');
+console.log('DB_URL:',process.env.DB_URL);
+console.log('secret:',process.env.SECRET);
+//mongoose.connect(process.env.DB_URL);
 //authapplication-tztcv
 //mongoose.connect('mongodb://localhost:27017/auth');
 
